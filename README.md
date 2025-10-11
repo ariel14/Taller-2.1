@@ -6,13 +6,22 @@ conexión remota SSH
 ```bash
 apt install openssh-server
 ```
-
+para ingresar remotamente al servidor 
 ```bash
-cat /etc/os-release
+ssh -p <puerto> <usuario>@<ip>
+```
+```bash
+ssh -p 22 barry@192.168.X.211
 ```
 
-Verificar la interfaz de red 
+Verificar que la otra maquina este prendida o si llega el icpm
 
 ```bash
-ip l
+ping 192.168.X.211
+```
+
+desde la maquina debian1 nos conectamos remotamente a la maquina debian 2
+
+```bash
+ssh -p 22 barry@192.168.X.211
 ```
